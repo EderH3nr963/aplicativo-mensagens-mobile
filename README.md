@@ -110,8 +110,53 @@ mobile/
 │   ├── (app)/             # Rotas da aplicação
 │   ├── (auth)/            # Rotas de autenticação
 │   └── _layout.tsx        # Layout principal
-├── assets/                # Recursos estáticos
-├── app.json              # Configuração do Expo
-└── package.json          # Dependências e scripts
+├── components/            # Componentes reutilizáveis
+│   ├── formLogin.tsx      # Formulário de login
+│   ├── modalAlert.tsx     # Modal de alerta
+│   ├── useBackButtonHandlerLogin.tsx  # Handler do botão voltar
+│   └── renderIcon.tsx     # Componente de renderização de ícones
+├── constants/             # Constantes e configurações
+│   ├── Endpoints.ts       # Endpoints da API
+│   ├── Messages.ts        # Mensagens do sistema
+│   ├── Colors.ts          # Paleta de cores
+│   └── Regex.ts           # Expressões regulares
+├── context/              # Contextos do React
+│   ├── Algo.tsx          # Contexto de algoritmo
+│   └── loggedContext.tsx  # Contexto de autenticação
+├── hooks/                # Custom hooks
+│   ├── useAuthCheck.ts   # Hook de verificação de autenticação
+│   ├── useAuth.ts        # Hook de autenticação
+│   ├── useForm.ts        # Hook de formulário
+│   └── registerHook.ts   # Hook de registro
+├── assets/              # Recursos estáticos
+├── app.json            # Configuração do Expo
+└── package.json        # Dependências e scripts
 ```
 
+## 📦 Descrição dos Componentes
+
+### Components
+
+- **formLogin.tsx**: Componente de formulário de login com validação
+- **modalAlert.tsx**: Modal reutilizável para exibição de alertas
+- **useBackButtonHandlerLogin.tsx**: Gerenciamento do botão voltar na tela de login
+- **renderIcon.tsx**: Componente para renderização padronizada de ícones
+
+### Constants
+
+- **Endpoints.ts**: Configuração dos endpoints da API
+- **Messages.ts**: Mensagens do sistema para feedback ao usuário
+- **Colors.ts**: Definição da paleta de cores do aplicativo
+- **Regex.ts**: Expressões regulares para validação
+
+### Context
+
+- **Algo.tsx**: Contexto para gerenciamento de algoritmos
+- **loggedContext.tsx**: Contexto para gerenciamento do estado de autenticação
+
+### Hooks
+
+- **useAuthCheck.ts**: Hook para verificação do estado de autenticação
+- **useAuth.ts**: Hook principal de autenticação com funções de login/logout
+- **useForm.ts**: Hook para gerenciamento de formulários
+- **registerHook.ts**: Hook para gerenciamento do processo de registro
